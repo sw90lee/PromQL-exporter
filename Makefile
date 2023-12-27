@@ -26,7 +26,3 @@ cclinux:
 	GOOS=linux GOARCH=arm go build -o bin/main-linux-arm main.go
 	GOOS=linux GOARCH=arm64 go build -o bin/main-linux-arm64 main.go
 	GOOS=freebsd GOARCH=386 go build -o bin/main-freebsd-386 main.go
-
-
-test:
-	@scp  -o ProxyJump=jsa@220.123.31.40 README.md p5g@116.89.189.123:/home/p5g/p5g-helm
