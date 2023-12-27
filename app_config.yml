@@ -5,21 +5,21 @@ cpu/metrics:
         type: counter
         prefix: p5g_wrcp1
         description: wrcp1_core_cpu_value
-        url: "http://10.254.170.79:32012/api/v1/query?query=node_cpu_seconds_total"
+        url: "http://URL/api/v1/query?query=node_cpu_seconds_total"
         labels: [ "container", "cpu", "endpoint", "instance", "job", "mode", "namespace", "pod", "service" ]
   - metrics:
       node_cpu_seconds_total:
         type: counter
         prefix: p5g_wrcp2
         description: wrcp2_core_cpu_value
-        url: "http://10.254.170.107:32012/api/v1/query?query=node_cpu_seconds_total"
+        url: "http://URL/api/v1/query?query=node_cpu_seconds_total"
         labels: [ "container", "cpu", "endpoint", "instance", "job", "mode", "namespace", "pod", "service" ]
   - metrics:
       node_cpu_seconds_total:
         type: counter
         prefix: p5g_mec
         description: mec_cpu_value
-        url: "https://thanos-querier-openshift-monitoring.apps.mec.tb.nia/api/v1/query?query=node_cpu_seconds_total"
+        url: "https://URL/api/v1/query?query=node_cpu_seconds_total"
         labels: [ "container", "cpu", "endpoint", "instance", "job", "mode", "namespace", "pod", "service" ]
 mem/metrics:
   collects:
@@ -28,19 +28,19 @@ mem/metrics:
           type: gauge
           prefix: p5g_mec
           description: mec_memory_Total_value
-          url: "http://thanos-querier-openshift-monitoring.apps.mec.tb.nia/api/v1/query?query=node_memory_MemTotal_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_MemTotal_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_MemFree_bytes:
           type: gauge
           prefix: p5g_mec
           description: mec_memory_Free_value
-          url: "http://thanos-querier-openshift-monitoring.apps.mec.tb.nia/api/v1/query?query=node_memory_MemFree_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_MemFree_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_Buffers_bytes:
           type: gauge
           prefix: p5g_mec
           description: mec_memory_Buffer_value
-          url: "http://thanos-querier-openshift-monitoring.apps.mec.tb.nia/api/v1/query?query=node_memory_Buffers_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_Buffers_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_Cached_bytes:
           type: gauge
@@ -53,50 +53,50 @@ mem/metrics:
           type: gauge
           prefix: p5g_wrcp1
           description: p5g_wrcp1_memory_total_value
-          url: "http://10.254.170.79:32012/api/v1/query?query=node_memory_MemTotal_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_MemTotal_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_MemFree_bytes:
           type: gauge
           prefix: p5g_wrcp1
           description: p5g_wrcp1_memory_Free_value
-          url: "http://10.254.170.79:32012/api/v1/query?query=node_memory_MemFree_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_MemFree_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_Buffers_bytes:
           type: gauge
           prefix: p5g_wrcp1
           description: p5g_wrcp1_memory_buffers_value
-          url: "http://10.254.170.79:32012/api/v1/query?query=node_memory_Buffers_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_Buffers_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_Cached_bytes:
           type: gauge
           prefix: p5g_wrcp1
           description: p5g_wrcp1_memory_cached_value
-          url: "http://10.254.170.79:32012/api/v1/query?query=node_memory_Cached_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_Cached_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
     - metrics:
         node_memory_MemTotal_bytes:
           type: gauge
           prefix: p5g_wrcp2
           description: p5g_wrcp2_memory_total_value
-          url: "http://10.254.170.107:32012/api/v1/query?query=node_memory_MemTotal_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_MemTotal_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_MemFree_bytes:
           type: gauge
           prefix: p5g_wrcp2
           description: p5g_wrcp2_memory_free_value
-          url: "http://10.254.170.107:32012/api/v1/query?query=node_memory_MemFree_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_MemFree_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_Buffers_bytes:
           type: gauge
           prefix: p5g_wrcp2
           description: p5g_wrcp2_memory_Buffer_value
-          url: "http://10.254.170.107:32012/api/v1/query?query=node_memory_Buffers_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_Buffers_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
         node_memory_Cached_bytes:
           type: gauge
           prefix: p5g_wrcp2
           description: p5g_wrcp2_memory_cached_value
-          url: "http://10.254.170.107:32012/api/v1/query?query=node_memory_Cached_bytes"
+          url: "http://URL/api/v1/query?query=node_memory_Cached_bytes"
           labels: [ "container", "endpoint", "instance", "job", "namespace", "pod", "service" ]
 pod/metrics:
   collects:
@@ -105,11 +105,11 @@ pod/metrics:
           type: gauge
           prefix: p5g_mec
           description: mec_pod_Memory_value
-          url: "http://thanos-querier-openshift-monitoring.apps.mec.tb.nia/api/v1/query?query=node_namespace_pod_container:container_memory_working_set_bytes"
+          url: "http://URL/api/v1/query?query=node_namespace_pod_container:container_memory_working_set_bytes"
           labels: [ "container", "namespace", "node", "pod" ]
         node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate:
           type: gauge
           prefix: p5g_mec
           description: mec_pod_Cpu_value
-          url: "http://thanos-querier-openshift-monitoring.apps.mec.tb.nia/api/v1/query?query=node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate"
+          url: "http://URL/api/v1/query?query=node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate"
           labels: [ "container", "namespace", "node", "pod" ]
