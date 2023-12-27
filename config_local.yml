@@ -14,6 +14,6 @@ file:
   RAN_NAME: ["Air_MAC_Packet","Air_MAC_Packet_(PCell)","Air_MAC_Packet_(SCell)","Downlink_Active_UE_Number"]
   CORE_NAME: ["AMFMS","AMFTPS","UECON_AMF","UEID_AMF"]
 exporter:
-  CURL_URL: "https://116.89.173.40:7443/oss/performanceData"
+  CURL_URL: "https://URL/oss/performanceData"
   OSS_USERNAME: "ossuser"
   OSS_PASSWORD: "osspasswd"
