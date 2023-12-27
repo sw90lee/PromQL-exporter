@@ -1,0 +1,5 @@
+## csv 파일무시
+*.csv
+test.go
+test2.go
+sed*

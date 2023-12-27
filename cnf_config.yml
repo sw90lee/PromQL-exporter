@@ -1,0 +1,929 @@
+metrics:
+  ### UECON_AMF
+  amf_ue_connect_attempt_count:
+    type: counter # Metric Type 설정
+    description: "UECON_AMF" # Description에는 FamilyName을 명시
+    labels: ["ne_id","system_id","ne_name","init_name","time_offset","gran_period","location"]
+    value_sequence: 7
+  amf_ue_connect_success_count:
+    type: counter # Metric Type 설정
+    description: "UECON_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location"]
+    value_sequence: 8
+  amf_ue_connect_response_time:
+    type: gauge # Metric Type 설정
+    description: "UECON_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 17
+  amf_ue_connect_success_ratio:
+    type: gauge # Metric Type 설정
+    description: "UECON_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 18
+  amf_ue_connect_cache_hit_ratio:
+    type: gauge # Metric Type 설정
+    description: "UECON_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 19
+  ### TMSI_AMF
+  amf_temporary_mobile_subscriber_identity_attempt_count:
+    type: counter # Metric Type 설정
+    description: "TMSI_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  amf_temporary_mobile_subscriber_identity_success_count:
+    type: counter # Metric Type 설정
+    description: "TMSI_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  amf_temporary_mobile_subscriber_identity_response_time:
+    type: counter # Metric Type 설정
+    description: "TMSI_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 17
+  amf_temporary_mobile_subscriber_identity_success_ratio:
+    type: gauge # Metric Type 설정
+    description: "TMSI_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 18
+  amf_temporary_mobile_subscriber_identity_cache_hit_ratio:
+    type: gauge # Metric Type 설정
+    description: "TMSI_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 19
+  ### UEID_AMF
+  amf_user_equipment_identifier_attempt_count:
+    type: counter # Metric Type 설정
+    description: "UEID_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  amf_user_equipment_identifier_success_count:
+    type: counter # Metric Type 설정
+    description: "UEID_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  amf_user_equipment_identifier_response_time:
+    type: counter # Metric Type 설정
+    description: "UEID_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 17
+  amf_user_equipment_identifier_success_ratio:
+    type: gauge # Metric Type 설정
+    description: "UEID_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 18
+  amf_user_equipment_identifier_cache_hit_ratio:
+    type: gauge # Metric Type 설정
+    description: "UEID_AMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 19
+  ### AMFTPS
+  amf_transactions_per_second_transmit_message_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  amf_transactions_per_second_receive_message_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  amf_transactions_per_second_total_message_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  amf_transactions_per_second_average:
+    type: gauge # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  amf_transactions_per_second_peak:
+    type: gauge # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  ### AMFMS
+  amf_mobile_subscriber_current_register_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  amf_mobile_subscriber_current_deregister_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  amf_mobile_subscriber_current_total_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  amf_mobile_subscriber_current_connection_idle_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  amf_mobile_subscriber_current_connection_count:
+    type: counter # Metric Type 설정
+    description: "AMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  ### AMFRRCEC
+  amf_radio_resource_control_entity_emergency_count:
+    type: counter # Metric Type 설정
+    description: "AMFRRCEC" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  amf_radio_resource_control_entity_high_priority_access_count:
+    type: counter # Metric Type 설정
+    description: "AMFRRCEC" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  amf_radio_resource_control_mobile_terminate_count:
+    type: counter # Metric Type 설정
+    description: "AMFRRCEC" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  ### GTPCTEID_SMF
+  smf_gprs_tunneling_protocol_tunnel_endpoint_identifier_attempt_count:
+    type: counter # Metric Type 설정
+    description: "GTPCTEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  smf_gprs_tunneling_protocol_tunnel_endpoint_identifier_success_count:
+    type: counter # Metric Type 설정
+    description: "GTPCTEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  smf_gprs_tunneling_protocol_tunnel_endpoint_identifier_not_found_count:
+    type: counter # Metric Type 설정
+    description: "GTPCTEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  smf_gprs_tunneling_protocol_tunnel_endpoint_identifier_response_time:
+    type: gauge # Metric Type 설정
+    description: "GTPCTEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 17
+  smf_gprs_tunneling_protocol_tunnel_endpoint_identifier_success_ratio:
+    type: gauge # Metric Type 설정
+    description: "GTPCTEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 18
+  smf_gprs_tunneling_protocol_tunnel_endpoint_identifier_hit_ratio:
+    type: gauge # Metric Type 설정
+    description: "GTPCTEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 19
+  ### GEOSEID_SMF
+  smf_geo_session_establishment_attempt_count:
+    type: counter # Metric Type 설정
+    description: "GEOSEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  smf_geo_session_establishment_success_count:
+    type: counter # Metric Type 설정
+    description: "GEOSEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  smf_geo_session_establishment_not_found_count:
+    type: counter # Metric Type 설정
+    description: "GEOSEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  smf_geo_session_establishment_response_time:
+    type: gauge # Metric Type 설정
+    description: "GEOSEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 17
+  smf_geo_session_establishment_attempt_success_ratio:
+    type: gauge # Metric Type 설정
+    description: "GEOSEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 18
+  smf_geo_session_establishment_attempt_hit_ratio:
+    type: gauge # Metric Type 설정
+    description: "GEOSEID_SMF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 19
+  ### SMFTPS
+  smf_transactions_per_second_transmit_message_count:
+    type: counter # Metric Type 설정
+    description: "SMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  smf_transactions_per_second_receive_message_count:
+    type: counter # Metric Type 설정
+    description: "SMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  smf_transactions_per_second_total_message_count:
+    type: counter # Metric Type 설정
+    description: "SMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  smf_transactions_per_second_average:
+    type: gauge # Metric Type 설정
+    description: "SMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  smf_transactions_per_second_peak:
+    type: gauge # Metric Type 설정
+    description: "SMFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  ### UPFTPS
+  upf_transactions_per_second_transmit_message_count:
+    type: counter # Metric Type 설정
+    description: "UPFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  upf_transactions_per_second_receive_message_count:
+    type: counter # Metric Type 설정
+    description: "UPFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  upf_transactions_per_second_total_message_count:
+    type: counter # Metric Type 설정
+    description: "UPFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  upf_transactions_per_second_average:
+    type: gauge # Metric Type 설정
+    description: "UPFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  upf_transactions_per_second_peak:
+    type: counter # Metric Type 설정
+    description: "UPFTPS" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  ### PIUPF
+  upf_packet_inspection_uplink_receive_message_size_kb:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  upf_packet_inspection_uplink_receive_message_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  upf_packet_inspection_uplink_receive_message_average_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  upf_packet_inspection_uplink_receive_message_peak_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  upf_packet_inspection_uplink_receive_message_average_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  upf_packet_inspection_uplink_receive_message_peak_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 12
+  upf_packet_inspection_uplink_drop_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 13
+  upf_packet_inspection_uplink_transmit_message_size_kb:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 14
+  upf_packet_inspection_uplink_transmit_message_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 15
+  upf_packet_inspection_uplink_transmit_message_average_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 16
+  upf_packet_inspection_uplink_transmit_message_peak_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 17
+  upf_packet_inspection_uplink_transmit_message_average_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 18
+  upf_packet_inspection_uplink_transmit_message_peak_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 19
+  upf_packet_inspection_uplink_bearer_transmit_receive_message_ratio:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 20
+  upf_packet_inspection_uplink_transmit_message_fragment_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 21
+  upf_packet_inspection_uplink_uplink_downlink_average_size_kb:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 22
+  upf_packet_inspection_downlink_receive_message_size_kb:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 23
+  upf_packet_inspection_downlink_receive_message_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 24
+  upf_packet_inspection_downlink_receive_message_average_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 25
+  upf_packet_inspection_downlink_receive_message_peak_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 26
+  upf_packet_inspection_downlink_receive_message_average_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 27
+  upf_packet_inspection_downlink_receive_message_peak_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 28
+  upf_packet_inspection_downlink_drop_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 29
+  upf_packet_inspection_downlink_transmit_message_size_kb:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 30
+  upf_packet_inspection_downlink_transmit_message_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 31
+  upf_packet_inspection_downlink_transmit_message_average_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 32
+  upf_packet_inspection_downlink_transmit_message_peak_kbps:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 33
+  upf_packet_inspection_downlink_transmit_message_average_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 34
+  upf_packet_inspection_downlink_transmit_message_peak_packets_per_second:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 35
+  upf_packet_inspection_downlink_bearer_transmit_receive_message_ratio:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 36
+  upf_packet_inspection_downlink_transmit_message_fragment_packet_count:
+    type: counter # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 37
+  upf_packet_inspection_downlink_uplink_downlink_average_size_kb:
+    type: gauge # Metric Type 설정
+    description: "PIUPF" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 38
+  ### APPCF_AMPORQ
+  pcf_application_function_policy_control_function_am_policy_overload_request_request_count:
+    type: counter # Metric Type 설정
+    description: "APPCF_AMPORQ" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  pcf_application_function_policy_control_function_am_policy_overload_request_response_count:
+    type: counter # Metric Type 설정
+    description: "APPCF_AMPORQ" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  pcf_application_function_policy_control_function_am_policy_overload_request_failure_count:
+    type: counter # Metric Type 설정
+    description: "APPCF_AMPORQ" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  pcf_application_function_policy_control_function_am_policy_overload_request_success_ratio:
+    type: gauge # Metric Type 설정
+    description: "APPCF_AMPORQ" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  ### DU Power Consumption
+  ### DU_Power_Consumption
+  du_power_consumption_factor_average:
+    type: gauge # Metric Type 설정
+    description: "DU_Power_Consumption" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 22
+  du_power_consumption_factor_min:
+    type: gauge # Metric Type 설정
+    description: "DU_Power_Consumption" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 23
+  du_power_consumption_factor_max:
+    type: gauge # Metric Type 설정
+    description: "DU_Power_Consumption" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 24
+  du_power_consumption_factor_total:
+    type: gauge # Metric Type 설정
+    description: "DU_Power_Consumption" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 25
+  du_power_consumption_factor_count:
+    type: counter # Metric Type 설정
+    description: "DU_Power_Consumption" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 26
+  ### Air MAC Packet
+  ### Air_MAC_Packet
+  du_air_mac_packet_air_mac_uplink_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  du_air_mac_packet_air_mac_uplink_byte_count:
+    type: counter # Metric Type 설정
+    description: "Air_MAC_Packet" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  du_air_mac_packet_air_mac_uplink_throughput_average:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  du_air_mac_packet_air_mac_downlink_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  du_air_mac_packet_air_mac_downlink_byte_count:
+    type: counter # Metric Type 설정
+    description: "Air_MAC_Packet" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  du_air_mac_packet_air_mac_downlink_throughput_average:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 12
+  ### Uplink Active UE Number
+  ### Uplink_Active_UE_Number
+  du_uplink_active_ue_number_average:
+    type: gauge # Metric Type 설정
+    description: "Uplink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  du_uplink_active_ue_number_total:
+    type: gauge # Metric Type 설정
+    description: "Uplink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  du_uplink_active_ue_number_count:
+    type: counter # Metric Type 설정
+    description: "Uplink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  du_uplink_active_ue_number_max:
+    type: gauge # Metric Type 설정
+    description: "Uplink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  du_uplink_active_ue_number_max_count:
+    type: counter # Metric Type 설정
+    description: "Uplink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  ### Downlink Active UE Number
+  ### Downlink_Active_UE_Number
+  du_downlink_active_ue_number_average:
+    type: gauge # Metric Type 설정
+    description: "Downlink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  du_downlink_active_ue_number_total:
+    type: gauge # Metric Type 설정
+    description: "Downlink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  du_downlink_active_ue_number_count:
+    type: counter # Metric Type 설정
+    description: "Downlink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  du_downlink_active_ue_number_max:
+    type: gauge # Metric Type 설정
+    description: "Downlink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  du_downlink_active_ue_number_max_count:
+    type: counter # Metric Type 설정
+    description: "Downlink_Active_UE_Number" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  ### Air MAC Packet (PCell)
+  ### Air_MAC_Packet_(PCell)
+  du_air_mac_packet_pcell_uplink_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(PCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  du_air_mac_packet_pcell_uplink_byte_count:
+    type: counter # Metric Type 설정
+    description: "Air_MAC_Packet_(PCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  du_air_mac_packet_pcell_uplink_throughput_average:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(PCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  du_air_mac_packet_pcell_downlink_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(PCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  du_air_mac_packet_pcell_downlink_byte_count:
+    type: counter # Metric Type 설정
+    description: "Air_MAC_Packet_(PCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  du_air_mac_packet_pcell_downlink_throughput_average:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(PCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 12
+  ### Air MAC Packet (SCell)
+  ### Air_MAC_Packet_(SCell)
+  du_air_mac_packet_scell_uplink_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(SCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  du_air_mac_packet_scell_uplink_byte_count:
+    type: counter # Metric Type 설정
+    description: "Air_MAC_Packet_(SCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  du_air_mac_packet_scell_uplink_throughput_average_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(SCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  du_air_mac_packet_scell_downlink_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(SCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  du_air_mac_packet_scell_downlink_byte_count:
+    type: counter # Metric Type 설정
+    description: "Air_MAC_Packet_(SCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  du_air_mac_packet_scell_downlink_throughput_average_kb:
+    type: gauge # Metric Type 설정
+    description: "Air_MAC_Packet_(SCell)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 12
+  ### DRB Connection Information collected in CP
+  ### DRB_Connection_Information_collected_in_CP
+  cu_cp_data_radio_bearer_connection_information_collect_in_cp_connect_number_average:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Information_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_cp_data_radio_bearer_connection_information_collect_in_cp_connect_number_max:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Information_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_cp_data_radio_bearer_connection_information_collect_in_cp_connect_number_total:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Information_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  cu_cp_data_radio_bearer_connection_information_collect_in_cp_connect_number_count:
+    type: counter # Metric Type 설정
+    description: "DRB_Connection_Information_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  ### DRB Connection Number per gNB collected in CP
+  ### DRB_Connection_Number_per_gNB_collected_in_CP
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_number_average:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_number_max:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_number_total:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_number_count:
+    type: counter # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  ### DRB Connection Number per gNB collected in CP per PLMN
+  ### DRB_Connection_Number_per_gNB_collected_in_CP_per_PLMN
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_per_public_land_mobile_network_number_average:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP_per_PLMN" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_per_public_land_mobile_network_number_max:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP_per_PLMN" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_per_public_land_mobile_network_number_total:
+    type: gauge # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP_per_PLMN" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  cu_cp_data_radio_bearer_connection_number_per_gnb_collect_in_cp_per_public_land_mobile_network_number_count:
+    type: counter # Metric Type 설정
+    description: "DRB_Connection_Number_per_gNB_collected_in_CP_per_PLMN" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  ### RRC Connection Establishment
+  ### RRC_Connection_Establishment
+  cu_cp_rrc_connection_establishment_connect_establishment_attempt_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Establishment" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_cp_rrc_connection_establishment_connect_establishment_success_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Establishment" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_cp_rrc_connection_establishment_connect_establishment_fail_cpfail_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Establishment" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  cu_cp_rrc_connection_establishment_connect_establishment_fail_radio_resource_control_timeout_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Establishment" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  cu_cp_rrc_connection_establishment_connect_establishment_reject_cpfail_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Establishment" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  cu_cp_rrc_connection_establishment_connect_establishment_reject_connection_admission_control_fail_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Establishment" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 12
+  ### RRC Connection Release
+  ### RRC_Connection_Release
+  cu_cp_rrc_connection_release_connect_release_by_gnb_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Release" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_cp_rrc_connection_release_connect_release_by_amf_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Release" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_cp_rrc_connection_release_connect_release_with_suspend_config_by_radio_resource_control_suspend_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Release" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  ### RRC Connection Setup Time collected in CP
+  ### RRC_Connection_Setup_Time_collected_in_CP
+  cu_cp_rrc_connection_release_connect_setup_time_collect_in_cp_connect_establishment_time_average_ms:
+    type: gauge # Metric Type 설정
+    description: "RRC_Connection_Setup_Time_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_cp_rrc_connection_release_connect_setup_time_collect_in_cp_connect_establishment_time_max_ms:
+    type: gauge # Metric Type 설정
+    description: "RRC_Connection_Setup_Time_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_cp_rrc_connection_release_connect_setup_time_collect_in_cp_connect_establishment_time_total_ms:
+    type: gauge # Metric Type 설정
+    description: "RRC_Connection_Setup_Time_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  cu_cp_rrc_connection_release_connect_setup_time_collect_in_cp_connect_establishment_time_count:
+    type: counter # Metric Type 설정
+    description: "RRC_Connection_Setup_Time_collected_in_CP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  ### PDCP Volume collected in UP per gNB ID per QCI
+  ### PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_volume_uplink_mb:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_volume_downlink_mb:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_volume_uplink_count:
+    type: counter # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 23
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_volume_downlink_count:
+    type: counter # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 24
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_min_volume_uplink_mb:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 31
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_min_volume_downlink_mb:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 32
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_max_volume_uplink_mb:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 39
+  cu_up_pdcp_volume_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_max_volume_downlink_mb:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Volume_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 40
+  ### PDCP Packet collected in UP per gNB ID per QCI
+  ### PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_byte_uplink_mb:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_bit_rate_uplink_kbps:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_byte_uplink_count:
+    type: counter # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 13
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_byte_downlink_count:
+    type: counter # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 14
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_loss_count_split_lte_downlink_count:
+    type: counter # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 25
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_loss_count_split_nr_downlink_count:
+    type: counter # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 26
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_delay_downlink_average_ms:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 32
+  cu_up_pdcp_packet_collect_in_up_per_gnb_id_per_qos_class_identifier_service_data_unit_delay_downlink_total_ms:
+    type: gauge # Metric Type 설정
+    description: "PDCP_Packet_collected_in_UP_per_gNB_ID_per_QCI" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 33
+  ### Uplink Only RoHC collected in UP for SA(5QI)
+  ### Uplink_Only_RoHC_collected_in_UP_for_SA(5QI)
+  cu_up_uplink_only_rohc_collected_in_up_for_standlone_5qi_uirohc_decompress_success_count:
+    type: counter # Metric Type 설정
+    description: "Uplink_Only_RoHC_collected_in_UP_for_SA(5QI)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_up_uplink_only_rohc_collected_in_up_for_standlone_5qi_uirohc_decompress_failure_count:
+    type: counter # Metric Type 설정
+    description: "Uplink_Only_RoHC_collected_in_UP_for_SA(5QI)" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  ### RoHC collected in UP for SA
+  ### RoHC_collected_in_UP_for_SA
+  cu_up_rohc_collected_in_up_for_standlone_rohc_decompress_success_count:
+    type: counter # Metric Type 설정
+    description: "RoHC_collected_in_UP_for_SA" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_up_rohc_collected_in_up_for_standlone_rohc_decompress_failure_count:
+    type: counter # Metric Type 설정
+    description: "RoHC_collected_in_UP_for_SA" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  ### UP Data Forwarding Traffic collected in UP in Stand-Alone Mode per gNB
+  ### UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_receive_message_count:
+    type: counter # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_transmit_message_count:
+    type: counter # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_receive_message_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_transmit_message_byte_kb:
+    type: gauge # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_receive_message_throughput_kbps:
+    type: gauge # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 11
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_receive_message_byte_count:
+    type: counter # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 12
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_transmit_message_throughput_kbps:
+    type: gauge # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 13
+  cu_up_data_forwarding_traffic_collect_in_up_in_standalone_mode_per_gnb_data_forward_transmit_message_byte_count:
+    type: counter # Metric Type 설정
+    description: "UP_Data_Forwarding_Traffic_collected_in_UP_in_Stand-Alone_Mode_per_gNB" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 14
+  ### F1-U UL Interface collected in UP per UP
+  ### F1-U_UL_Interface_collected_in_UP_per_UP
+  cu_up_f1_u_uplink_interface_collect_in_up_per_up_packet_loss_count:
+    type: counter # Metric Type 설정
+    description: "F1-U_UL_Interface_collected_in_UP_per_UP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 7
+  cu_up_f1_u_uplink_interface_collect_in_up_per_up_packet_out_of_sequence_count:
+    type: counter # Metric Type 설정
+    description: "F1-U_UL_Interface_collected_in_UP_per_UP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 8
+  cu_up_f1_u_uplink_interface_collect_in_up_per_up_packet_count:
+    type: counter # Metric Type 설정
+    description: "F1-U_UL_Interface_collected_in_UP_per_UP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 9
+  cu_up_f1_u_uplink_interface_collect_in_up_per_up_packet_loss_rate:
+    type: gauge # Metric Type 설정
+    description: "F1-U_UL_Interface_collected_in_UP_per_UP" # Description에는 FamilyName을 명시
+    labels: [ "ne_id","system_id","ne_name","init_name","time_offset","gran_period","location" ]
+    value_sequence: 10

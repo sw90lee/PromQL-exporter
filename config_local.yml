@@ -1,0 +1,19 @@
+logging:
+  LEVEL: INFO
+  ENCODE: json # console or json 사용가능
+file:
+  # PV를 붙일 경로 설정
+  MEC_CONFIG: "C:/Users/Insoft/.kube/config"
+  CSV_PATH: "C:/Users/Insoft/GolandProjects/data"
+  API_PATH: "C:/Users/Insoft/GolandProjects/data/api"
+  #CSV_PATH: "/mnt/data"
+  # FailmyName은 Curl 날릴때 사용 및 File저장 시 사용
+  # 수집 내용이 추가 필요시 해당 부분에 FamilyName을 추가해줘야합니다.
+  # FAMILYNAME: ["UECON_AMF","TMSI_AMF","UEID_AMF","AMFTPS","AMFMS","AMFRRCEC","GTPCTEID_SMF","GEOSEID_SMF","SMFTPS","UPFTPS","PIUPF","APPCF_AMPORQ","DU%20Power%20Consumption","Air%20MAC%20Packet","Uplink%20Active%20UE%20Number","Downlink%20Active%20UE%20Number","Air%20MAC%20Packet%20(PCell)","Air%20MAC%20Packet%20(SCell)","DRB%20Connection%20Information%20collected%20in%20CP","DRB%20Connection%20Number%20per%20gNB%20collected%20in%20CP","DRB%20Connection%20Number%20per%20gNB%20collected%20in%20CP%20per%20PLMN","RRC%20Connection%20Establishment","RRC%20Connection%20Release","RRC%20Connection%20Setup%20Time%20collected%20in%20CP","PDCP%20Volume%20collected%20in%20UP%20per%20gNB%20ID%20per%20QCI","PDCP%20Packet%20collected%20in%20UP%20per%20gNB%20ID%20per%20QCI","Uplink%20Only%20RoHC%20collected%20in%20UP%20for%20SA(5QI)","RoHC%20collected%20in%20UP%20for%20SA","UP%20Data%20Forwarding%20Traffic%20collected%20in%20UP%20in%20Stand-Alone%20Mode%20per%20gNB","F1-U%20UL%20Interface%20collected%20in%20UP%20per%20UP"]
+  FAMILY_NAME: [ "UECON_AMF","TMSI_AMF","UEID_AMF","AMFTPS","AMFMS","AMFRRCEC","GTPCTEID_SMF","GEOSEID_SMF","SMFTPS","UPFTPS","PIUPF","APPCF_AMPORQ","DU Power Consumption","Air MAC Packet","Uplink Active UE Number","Downlink Active UE Number","Air MAC Packet (PCell)","Air MAC Packet (SCell)","DRB Connection Information collected in CP","DRB Connection Number per gNB collected in CP","DRB Connection Number per gNB collected in CP per PLMN","RRC Connection Establishment","RRC Connection Release","RRC Connection Setup Time collected in CP","PDCP Volume collected in UP per gNB ID per QCI","PDCP Packet collected in UP per gNB ID per QCI","Uplink Only RoHC collected in UP for SA(5QI)","RoHC collected in UP for SA","UP Data Forwarding Traffic collected in UP in Stand-Alone Mode per gNB","F1-U UL Interface collected in UP per UP"]
+  RAN_NAME: ["Air_MAC_Packet","Air_MAC_Packet_(PCell)","Air_MAC_Packet_(SCell)","Downlink_Active_UE_Number"]
+  CORE_NAME: ["AMFMS","AMFTPS","UECON_AMF","UEID_AMF"]
+exporter:
+  CURL_URL: "https://116.89.173.40:7443/oss/performanceData"
+  OSS_USERNAME: "ossuser"
+  OSS_PASSWORD: "osspasswd"
