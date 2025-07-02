@@ -1,11 +1,11 @@
 # ImageName
-img = harbor.nia-p5g.org/p5g/p5g-samsung-cpc
+img = imageURL
 tag = 85
 # chartinstal
 version = 0.4.0
-chart_dir = p5g-samsung-cpc
-chart_name = p5g-samsung-cpc
-chart_repo = kt5g-lab
+chart_dir = chartDir
+chart_name = chartName
+chart_repo = chartDirRepo
 
 ### Build
 save:
